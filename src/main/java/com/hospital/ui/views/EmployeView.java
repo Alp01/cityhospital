@@ -32,9 +32,11 @@ import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.RolesAllowed;
 
 @Route("employes")
 @Menu(title = "Employés", icon = "vaadin:group", order = 1)
+@RolesAllowed({"ROLE_ADMIN", "ROLE_RH"})
 @PageTitle("Employés — City Hospital")
 public class EmployeView extends VerticalLayout {
 

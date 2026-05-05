@@ -25,10 +25,12 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.RolesAllowed;
 
 @Route("services")
 @PageTitle("Services — City Hospital")
 @Menu(title = "Services", icon = "vaadin:hospital", order = 2)
+@RolesAllowed("ROLE_ADMIN")
 public class ServiceView extends VerticalLayout {
 
     private final Grid<ServiceHospitalier> grid = new Grid<>(ServiceHospitalier.class, false);

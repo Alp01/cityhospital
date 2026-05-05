@@ -21,11 +21,13 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.PermitAll;
 
 @Route("")
 @RouteAlias("dashboard")
 @PageTitle("Tableau de bord — City Hospital")
 @Menu(title = "Tableau de bord", icon = "vaadin:dashboard", order = 0)
+@PermitAll
 public class DashboardView extends VerticalLayout {
 
     private final EmployeService            employeService;

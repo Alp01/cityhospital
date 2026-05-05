@@ -28,9 +28,11 @@ import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.RolesAllowed;
 
 @Route("planning")
 @PageTitle("Planning — City Hospital")
+@RolesAllowed({"ROLE_ADMIN", "ROLE_RH"})
 @Menu(title = "Planning & Congés", icon = "vaadin:calendar", order = 3)
 public class PlanningView extends VerticalLayout {
 
